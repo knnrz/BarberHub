@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendamento Barbearia Premium</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="agendamento.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Agende seu horário</h1>
+
+    <form id="appointment-form">
+
+      <div class="form-group">
+        <input type="text" id="name" placeholder=" " required>
+        <label for="name">Nome Completo</label>
+      </div>
+
+      <div class="form-group">
+        <input type="email" id="email" placeholder=" " required>
+        <label for="email">Seu Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="date" id="date" placeholder=" " required>
+        <label for="date">Data do Agendamento</label>
+      </div>
+
+      <div class="form-group">
+        <input type="time" id="time" placeholder=" " required>
+        <label for="time">Horário</label>
+      </div>
+
+      <div class="form-group">
+        <textarea id="notes" placeholder=" "></textarea>
+        <label for="notes">Observações</label>
+      </div>
+
+      <button type="submit">Agendar Agora</button>
+    </form>
+
+    <div id="notification" class="hidden">
+      Agendamento enviado com sucesso!
+    </div>
+
+  </div>
+
+  <script src="agendamento.js"></script>
+
+</body>
+</html>

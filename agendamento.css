@@ -1,0 +1,139 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  margin: 0;
+  padding: 0;
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: #292929;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+input, textarea {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #555;
+  border-radius: 6px;
+  padding: 14px 10px 14px 10px;
+  font-size: 16px;
+  color: #f0f0f0;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #0d6efd;
+}
+
+label {
+  position: absolute;
+  top: 14px;
+  left: 12px;
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background: #292929;
+  padding: 0 5px;
+}
+
+/* Flutuação */
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label,
+textarea:focus ~ label,
+textarea:not(:placeholder-shown) ~ label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  color: #0d6efd;
+}
+
+button {
+  background: linear-gradient(135deg, #0d6efd, #084298);
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #084298, #0d6efd);
+}
+
+/* Notificação de sucesso */
+#notification {
+  background: #28a745;
+  color: #fff;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  display: none;
+}
+
+#notification.show {
+  display: block;
+  animation: popUp 0.5s ease;
+}
+
+@keyframes popUp {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hidden {
+  display: none;
+}
